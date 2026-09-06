@@ -1,0 +1,202 @@
+@import "../../design/design.css";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+
+  --color-primary: #A11D58;
+  --color-cream: #FFF5F8;
+  --color-creamDark: #E8DFD3;
+  --color-softBlue: #B4C6DF;
+  --color-softPink: #F9D8E6;
+  --color-darkBg: #121214;
+  --color-darkCard: #1C1C1F;
+  --color-textMain: #222222;
+  --bg-cream: #FAF8F3;
+  --bg-white: #FFFFFF;
+  --bg-soft-blue: #E2EAF4;
+  --bg-dark: #211F1D;
+
+  --color-brandPink: #c94073;
+  --color-brandPinkDark: #df6491;
+
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delay-1: float 6s ease-in-out -2s infinite;
+  --animate-float-delay-2: float 6s ease-in-out -4s infinite;
+  --animate-spin-slow: spin 12s linear infinite;
+
+  --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.03);
+  --shadow-premium: 0 10px 40px -10px rgba(192, 57, 107, 0.1);
+  /* Hint Pink Shadow */
+  --shadow-dark: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-soft);
+}
+
+/* 2. Bayangan Premium (Premium Shadow) */
+.shadow-premium {
+  box-shadow: var(--shadow-premium);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.shadow-premium:hover {
+  box-shadow: 0 15px 50px -10px rgba(192, 57, 107, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Gaya dasar untuk bola cahaya */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+  /* Agar tidak bisa di-klik dan mengganggu konten */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem) scale(0.98);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal[data-direction="left"] {
+  transform: translateX(-2rem) translateY(2rem) scale(0.98);
+}
+
+.reveal[data-direction="right"] {
+  transform: translateX(2rem) translateY(2rem) scale(0.98);
+}
+
+.reveal.active[data-direction="left"],
+.reveal.active[data-direction="right"] {
+  transform: translateX(0) translateY(0) scale(1);
+}
+
+/* Keyframes untuk pergerakan lambat */
+@keyframes float-slow {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Keyframes untuk pergerakan berlawanan arah */
+@keyframes float-reverse {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(-30px, 50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(20px, -20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Kelas untuk menerapkan animasi */
+.animate-orb-1 {
+  animation: float-slow 15s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: float-reverse 12s ease-in-out infinite;
+}
+
+/* Force override any Tailwind background colors */
+body {
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: default;
+
+  background: linear-gradient(120deg, #fdfbfb 0%, #f4ebf6 50%, #fff1f2 100%);
+  background-size: 200% 200%;
+  background-attachment: fixed;
+  animation: soft-gradient 12s ease infinite;
+}
+
+@keyframes soft-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.dark body,
+body.dark {
+  background-color: #121214 !important;
+  background-image:
+    radial-gradient(at 15% 0%, rgba(161, 29, 88, 0.08) 0%, transparent 40%),
+    radial-gradient(at 85% 100%, rgba(161, 29, 88, 0.05) 0%, transparent 40%) !important;
+  background-attachment: fixed !important;
+}
+
+.bg-white {
+  background-color: var(--bg-white);
+}
+
+.bg-soft-blue {
+  background-color: var(--bg-soft-blue);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
