@@ -35,7 +35,7 @@ const GlobalBackground = () => {
         const colors = [0xF5EFE6, 0xF9D8E6, 0xB4C6DF];
         const bubblePositions = [];
 
-        for (let i = 0; i < 70; i++) {
+        for (let i = 0; i < 45; i++) {
             const material = new THREE.MeshPhysicalMaterial({
                 color: colors[Math.floor(Math.random() * colors.length)],
                 metalness: 0.1,

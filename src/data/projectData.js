@@ -20,7 +20,7 @@ export const projectData = [
     //     deskripsi : "Eksplorasi UI dengan palet pastel dan identitas visual grafis baru untuk meningkatkan kenyamanan visual"
     // },
     {
-        img: "../../../public/img/calorie.png",
+        img: "/img/calorie.png",
         icon: FaArrowRight,
         category: [
             {

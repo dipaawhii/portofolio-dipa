@@ -57,6 +57,46 @@
   box-shadow: var(--shadow-soft);
 }
 
+.glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.02);
+}
+
+.dark .glass {
+  background: rgba(30, 30, 35, 0.4);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.arch-shape {
+  border-radius: 10rem 10rem 0 0;
+}
+
+.tilt-content {
+  transform: translateZ(40px);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1.5rem;
+  grid-auto-flow: dense;
+}
+
+@media (min-width: 768px) {
+  .bento-wide {
+    grid-column: span 2;
+  }
+
+  .bento-tall {
+    grid-row: span 2;
+  }
+}
+
 /* 2. Bayangan Premium (Premium Shadow) */
 .shadow-premium {
   box-shadow: var(--shadow-premium);

@@ -14,7 +14,7 @@ const Gallery = () => {
                 <div className="bento-grid">
                     {/* <!-- wisuda --> */}
                     <div className="bento-tall glass rounded-3xl overflow-hidden group reveal relative p-1">
-                        <img src="../../public/img/wisuda.jpeg" alt="Sidang Skripsi" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                        <img src="/img/wisuda.jpeg" alt="Sidang Skripsi" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-t from-textMain/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 rounded-3xl">
                             <div>
                                 <h4 className="text-white font-serif text-2xl font-bold mb-1" data-i18n="gal1Title">Wisuda</h4>
@@ -25,7 +25,7 @@ const Gallery = () => {
 
                     {/* <!-- sidang --> */}
                     <div className="bento-wide glass rounded-3xl overflow-hidden group reveal relative p-1">
-                        <img src="../../public/img/sidang2.jpeg" alt="Wisuda" className="w-full h-full object-cover rounded-[1.3rem] object-center rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                        <img src="/img/sidang2.jpeg" alt="Wisuda" className="w-full h-full object-cover rounded-[1.3rem] object-center filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" />
                         <div className="absolute inset-0 bg-linear-to-t from-textMain/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 rounded-3xl">
                             <div>
                                 <h4 className="text-white font-serif text-2xl font-bold mb-1" data-i18n="gal2Title">Lulus Sidang!</h4>
@@ -36,7 +36,7 @@ const Gallery = () => {
 
                     {/* <!-- Yudis --> */}
                     <div className="glass rounded-3xl overflow-hidden group reveal relative p-1">
-                        <img src="../../public/img/yudis2.jpeg" alt="Magang" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" />
+                        <img src="/img/yudis2.jpeg" alt="Magang" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-20 group-hover:grayscale-0 transition-all duration-700" />
                         <div className="absolute inset-0 bg-textMain/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-sm rounded-3xl">
                             <h4 className="text-white font-serif text-xl font-bold" data-i18n="gal3Title">Yudisium</h4>
                         </div>
@@ -44,7 +44,7 @@ const Gallery = () => {
 
                     {/* <!-- KKU --> */}
                     <div className="glass rounded-3xl overflow-hidden group reveal relative p-1">
-                        <img src="../../public/img/kku.jpeg" alt="Yudisium" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                        <img src="/img/kku.jpeg" alt="Yudisium" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
                         <div className="absolute inset-0 bg-textMain/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center backdrop-blur-sm rounded-3xl">
                             <h4 className="text-white font-serif text-xl font-bold" data-i18n="gal4Title">KKU</h4>
                         </div>
@@ -52,7 +52,7 @@ const Gallery = () => {
 
                     {/* <!-- magang --> */}
                     <div className="bento-wide glass rounded-3xl overflow-hidden group reveal relative p-1">
-                        <img src="../../public/img/magang.jpeg" alt="KKU" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                        <img src="/img/magang.JPEG" alt="KKU" className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
                         <div className="absolute inset-0 bg-gradient-to-t from-textMain/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 rounded-3xl">
                             <div>
                                 <h4 className="text-white font-serif text-2xl font-bold mb-1" data-i18n="gal5Title">Magang di POLDA Kalbar</h4>
@@ -63,7 +63,7 @@ const Gallery = () => {
                     
                     {/* <div className="bento-wide glass rounded-3xl overflow-hidden group reveal relative p-1">
                         <img
-                            src="../../public/img/himpunan.png"
+                            src="/img/himpunan.PNG"
                             alt="Buka Puasa HM-TI"
                             className="w-full h-full object-cover rounded-[1.3rem] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
                         />

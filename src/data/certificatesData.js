@@ -1,12 +1,12 @@
 export const CertificatesData = [
 
     {
-        img:"../../public/img/hactiv.jpg",
+        img:"/img/hactiv.jpg",
         nama : "LLM-Based Tools & Gemini API Integration",
         penerbit : "Hacktiv8 Indonesia",
     },
     {
-        img:"../../public/img/dicoding.jpg",
+        img:"/img/Dicoding.jpg",
         nama : "Basic Web Programming",
         penerbit : "Dicoding Indonesia",
     },
